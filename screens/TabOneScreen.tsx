@@ -1,32 +1,38 @@
-import { StyleSheet } from 'react-native';
+import { Text, Image, View, StyleSheet } from 'react-native';
 
-import EditScreenInfo from '../components/EditScreenInfo';
-import { Text, View } from '../components/Themed';
-import { RootTabScreenProps } from '../types';
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Tab One</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="/screens/TabOneScreen.tsx" />
+      <Image source={{uri: 'https://notjustdev-dummy.s3.us-east-2.amazonaws.com/avatars/elon.png'}} style={styles.image} />
+      <View>
+        <View style={styles.row}>
+            <Text style={styles.name}>Elon Musk</Text>
+            <Text style={styles.text}>11:11 AM</Text>
+        </View> 
+        <Text style={styles.text}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, obcaecati? Eum laborum soluta temporibus vitae doloribus dignissimos, quaerat saepe quasi. Voluptatibus est, inventore illo natus repellat vitae architecto magnam temporibus.</Text>
+      </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+
   },
-  title: {
-    fontSize: 20,
-    fontWeight: 'bold',
+  image: {
+    width: 100,
+    height: 100
+
   },
-  separator: {
-    marginVertical: 30,
-    height: 1,
-    width: '80%',
+  name: {
+
   },
+  row: {
+
+  },
+  text: {
+    fontSize: 30, 
+    color: 'blue'
+  }
 });
