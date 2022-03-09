@@ -143,5 +143,5 @@ export default [{
     id: 'm9',
     content: 'Meet me at the same place',
     createdAt: '2020-09-25T15:40:00.000Z',
-  },
+  }
 }]
