@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, Image, View, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
 import ChatRoomItem from '../components/ChatRoomItem';
 
 export default function TabOneScreen({ navigation }: RootTabScreenProps<'TabOne'>) {
