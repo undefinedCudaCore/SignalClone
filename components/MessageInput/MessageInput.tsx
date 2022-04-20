@@ -1,19 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import { Text, View, StyleSheet, TextInput } from "react-native";
-import { FontAwesome5, Feather, AntDesign } from '@expo/vector-icons';
+import { FontAwesome5, Feather, AntDesign, FontAwesome } from '@expo/vector-icons';
 
 const MessageInput = () => {
+    const [message, setMessage] = useState('');
+    
     return (
         <View style={styles.root}>
             <View style={styles.inputContainer}>
                 <FontAwesome5 name="smile-wink" size={24} color="grey" style={styles.icon} />
-                <TextInput style={styles.input}/>
+
+                <TextInput 
+                    style={styles.input}
+                    value={message}
+                    onChangeText={setMessage}
+                    placeholder="Write your message here..."
+                />
+
                 <Feather name="camera" size={24} color="grey" style={styles.icon} />
                 <FontAwesome5 name="microphone-alt" size={20} color="grey" style={styles.icon} />
             </View>
             <View style={styles.buttonContainer}>
                 <Text style={styles.buttonText}>
-                <AntDesign name="pluscircleo" size={40} color="white" />
+                {message ? <FontAwesome name="send-o" size={20} color="white" /> : <AntDesign name="pluscircleo" size={40} color="white" />}
                 </Text>
             </View>
         </View>
