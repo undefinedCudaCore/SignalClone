@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Text, View, StyleSheet, TextInput } from "react-native";
+import { Text, View, StyleSheet, TextInput, Pressable } from "react-native";
 import { FontAwesome5, Feather, AntDesign, FontAwesome } from '@expo/vector-icons';
 
 const MessageInput = () => {
@@ -22,7 +22,7 @@ const MessageInput = () => {
             </View>
             <View style={styles.buttonContainer}>
                 <Text style={styles.buttonText}>
-                {message ? <FontAwesome name="send-o" size={20} color="white" /> : <AntDesign name="pluscircleo" size={40} color="white" />}
+                {message ? <FontAwesome name="send" size={18} color="white" /> : <AntDesign name="pluscircleo" size={40} color="white" />}
                 </Text>
             </View>
         </View>
